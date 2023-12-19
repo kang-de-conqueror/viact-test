@@ -1,0 +1,124 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  id: Float!
+  username: String!
+  password: String!
+  name: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Genre {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  id: Float!
+  name: String!
+}
+
+type ProductionCompany {
+  id: Int
+  name: String
+}
+
+type ProductionCountry {
+  id: Int
+  name: String!
+}
+
+type Movie {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  id: Float!
+  imdbId: String!
+  originalLanguage: String!
+  originalTitle: String!
+  overview: String
+  popularity: Float!
+  posterPath: String!
+  tagLine: String
+  releaseDate: String
+  revenue: Float!
+  budget: Float!
+  runtime: Float!
+  adult: Boolean!
+  status: String!
+  title: String!
+  video: Boolean!
+  voteAverage: Float!
+  voteCount: Float!
+  genres: [Genre!]!
+  productionCompanies: [ProductionCompany!]
+  productionCountries: [ProductionCountry!]
+}
+
+type UserRating {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  id: Float!
+  userId: Float!
+  movieId: Float!
+  rating: Float!
+  timestamp: Float!
+}
+
+type AuthTokenOutputDto {
+  accessToken: String!
+}
+
+type RegisterOutput {
+  accessToken: String!
+}
+
+type PaginatedMovieListOutput {
+  items: [Movie!]
+  total: Float!
+  page: Float!
+  perPage: Float!
+}
+
+type Query {
+  whoAmI: User!
+  movie(id: Int!): Movie!
+  popularMovies: [Movie!]!
+  trendingMovies: [Movie!]!
+  findMoviesByGenre(pagination: PaginationArg!, genreId: Float!): PaginatedMovieListOutput!
+  recommendedMovies: [Movie!]!
+  searchMovies(pagination: PaginationArg!, query: String!): PaginatedMovieListOutput!
+  genres: [Genre!]!
+  userRatingOfMovie(movieId: Float!): UserRating!
+}
+
+input PaginationArg {
+  page: Int = 1
+  perPage: Int = 20
+}
+
+type Mutation {
+  register(input: RegisterInput!): RegisterOutput!
+  login(input: LoginInput!): AuthTokenOutputDto!
+  rateMovie(input: RateInput!): UserRating!
+}
+
+input RegisterInput {
+  password: String!
+  name: String!
+  username: String!
+}
+
+input LoginInput {
+  username: String!
+  password: String!
+}
+
+input RateInput {
+  movieId: Int!
+  rating: Float!
+}
