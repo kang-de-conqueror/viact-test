@@ -1,0 +1,49 @@
+.root {
+    background: #111;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    position: relative;
+    flex-grow: 1;
+    margin-left: 0;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    gap: 2rem;
+    padding: 0;
+}
+
+.menuItem {
+    padding: 2rem;
+}
+
+.menuItem:hover,
+.menuItem:hover a {
+    background: #fff;
+    color: #111;
+}
+
+.menuItem,
+.menuItem a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.btnLogin {
+    background: #e40914;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}

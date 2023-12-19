@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+/*
+
+0 - 600px: phone
+600-900: tablet portrait
+900-1200: tablet landscape
+1200-1800: normal style
+1800+: big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+
+*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden !important;
+    background: #262626;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 112.5em) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}

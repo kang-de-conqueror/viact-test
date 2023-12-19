@@ -1,0 +1,35 @@
+.root {
+    color: #fff;
+    background: #262626;
+    min-height: 95vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    background: #e40914;
+    padding: 5px 49px;
+    transition: all 0.2s;
+    border: none;
+    border-radius: 999px;
+}
+
+.footer {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.footer button {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    color: #e40914;
+}

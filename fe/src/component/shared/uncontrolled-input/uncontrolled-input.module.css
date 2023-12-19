@@ -1,0 +1,21 @@
+.root {
+    margin-bottom: 2rem;
+}
+
+.label {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.input {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    width: 100%;
+}

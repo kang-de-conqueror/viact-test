@@ -1,0 +1,126 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    height: 40rem;
+    width: 100%;
+}
+
+.left {
+    width: 70%;
+    height: 100%;
+}
+
+.leftMain {
+    position: relative;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.left:hover .overlay {
+    background: rgba(17, 17, 17, 0.5);
+}
+
+.metadata {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    left: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnPlay {
+    position: absolute;
+    z-index: 20;
+    top: calc(50% - 22px);
+    left: calc(50% - 19px);
+    display: block;
+    width: 38px;
+    height: 44px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.3s;
+}
+
+.btnPlay:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.right {
+    flex: 1;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.363636;
+    color: #fff;
+    word-break: break-word;
+    margin-bottom: 7px;
+}
+
+.info {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.85;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    word-break: break-word;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.infoItem {
+}
+
+.description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #bbbbbb;
+    word-break: break-word;
+    margin-bottom: 32px;
+}
+
+.btnMore {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    background: #e40914;
+    padding: 1.5rem 5rem;
+    transition: all 0.2s;
+    border: none;
+    border-radius: 999px;
+}
+
+.btnMore:hover {
+    background: #b30710;
+}

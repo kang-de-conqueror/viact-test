@@ -1,0 +1,20 @@
+.root {
+    background: #262626;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: #fff;
+    text-transform: uppercase;
+    word-break: break-word;
+}

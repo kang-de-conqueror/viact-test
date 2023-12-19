@@ -1,0 +1,113 @@
+.root {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.overlay {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0)),
+        to(#000)
+    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+    top: 0;
+    right: -1px;
+    left: 0;
+    pointer-events: none;
+}
+
+.metadata {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    left: 15px;
+    max-width: calc(100% - 30px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.label {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    word-break: break-word;
+    background: #e40914;
+    padding: 2px 11px;
+}
+
+.content {
+    width: 365px;
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 40px - 110px);
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+    text-align: left;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 7px;
+    max-height: 54px;
+}
+
+.card5__title a {
+    color: #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.releaseDate {
+    position: relative;
+    color: rgba(256, 256, 256, 0.5);
+}
+
+.description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #bbbbbb;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 32px;
+    max-height: 78px;
+}
